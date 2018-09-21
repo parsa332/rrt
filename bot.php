@@ -19,7 +19,7 @@ set_time_limit(0);
 flush();
 
 
-$API_KEY = 'توکن';
+$API_KEY = '541645114:AAEeGiponeUAv45w4uBVQzRogAa0s1yzFVw';
 ##------------------------------##
 define('API_KEY', $API_KEY);
 /*فانکشن برای هر سورسی الزامی است و ادیت کردن این بخش به هیچ وج توصیه نمیشود*/
@@ -157,24 +157,23 @@ $text = $message->text;
 $rasol = file_get_contents("databot/$chat_id/rasol.txt");
 $dataa=$update->callback_query->data;
 $chatidd = $update->callback_query->from->id;
-$ADMIN = 101564409; 
+$ADMIN = 581956880; 
 $chatid = $update->callback_query->message->chat->id;
 $databot = $update->callback_query->databot;
 $message_id2 = $update->callback_query->message->message_id;
-$check1 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@bot_sazan_good&user_id=$from_id"))->result->status;
-$check2 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Management_Channel_bots&user_id=$from_id"))->result->status;
-$timee = json_decode(file_get_contents("http://api-bot-telegram.cf/api/time.php?token=توکن"));
+$check1 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@telexbeta&user_id=$from_id"))->result->status;
+$check2 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@telexbeta&user_id=$from_id"))->result->status;
+$timee = json_decode(file_get_contents("http://api-bot-telegram.cf/api/time.php?token=541645114:AAEeGiponeUAv45w4uBVQzRogAa0s1yzFVw"));
 $time2 = objectToArrays($timee);
 $time = $time2["FAtime"];
 $date = $time2["FAdate"];
-$chistan = file_get_contents("http://api-bot-telegram.cf/api/chistan.php?token=توکن");
+$chistan = file_get_contents("http://api-bot-telegram.cf/api/chistan.php?token=541645114:AAEeGiponeUAv45w4uBVQzRogAa0s1yzFVw");
 $textmaschannel = "🔒 ربات قفل است.
 
 ⚠️ برای فعالیت در ربات لطفا در کانال های ( 🔊مدیریت کانال📢 , 🤖بوت سازان پیشرفته🤖 )  عضو شوید
 
-🔊مدیریت کانال📢 :@Management_Channel_bots
+🔊مدیریت کانال📢 :@pmrsanco_bot
 
-🤖بوت سازان پیشرفته🤖 :@bot_sazan_good
 
 ♻️ پس از عضویت لطفا روی دکمه ی ( عضو شدم🛰  ) کلیک کنید.";
 ///
@@ -304,28 +303,27 @@ mkdir("databot/$chat_id");
 تعداد موشک های شما : $mosak11");
 }
 } elseif($databot=="join"){
-$check11 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@bot_sazan_good&user_id=$chatid"))->result->status;
-$check22 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Management_Channel_bots&user_id=$chatid"))->result->status;
+$check11 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@telexbeta&user_id=$chatid"))->result->status;
+$check22 = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@telexbeta&user_id=$chatid"))->result->status;
 if($check11 != "member" && $check11 != "creator" && $check11 != "administrator" or $check22 != "member" && $check22 != "creator" && $check22 != "administrator"){
      $chack =   bot('editmessagetext', [
             'chat_id' => $chatid,
             'message_id' => $message_id2,
         'text'=>"شما هنوز عضو کانال ها نشده اید!!!!!!!!!!!!!!
 
-⚠️ برای فعالیت در ربات لطفا در کانال های ( 🔊مدیریت کانال📢 , 🤖بوت سازان پیشرفته🤖 )  عضو شوید
+⚠️ برای فعالیت در ربات لطفا در کانال های ( 🔊مدیریت کانال📢 ,🤖بوت سازان پیشرفته🤖 )  عضو شوید
 
-🔊مدیریت کانال📢 :@Management_Channel_bots
+🔊مدیریت کانال📢 :@telexbeta
 
-🤖بوت سازان پیشرفته🤖 :@bot_sazan_good
 
 ♻️ پس از عضویت لطفا روی دکمه ی ( عضو شدم🛰  ) کلیک کنید.", 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/Management_Channel_bots"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/telexbeta"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖بوت سازان پیشرفته🤖",'url'=>"https://telegram.me/bot_sazan_good"] 
+                    
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -352,10 +350,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/Management_Channel_bots"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/telexbeta"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖بوت سازان پیشرفته🤖",'url'=>"https://telegram.me/bot_sazan_good"] 
+                    
                 ] ,
     [
   ['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -388,10 +386,10 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         'reply_markup'=>json_encode([ 
             'inline_keyboard'=>[ 
                 [ 
-                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/Management_Channel_bots"] 
+                    ['text'=>"🔊مدیریت کانال📢",'url'=>"https://telegram.me/telexbeta"] 
                 ] ,
                 [ 
-                    ['text'=>"🤖بوت سازان پیشرفته🤖",'url'=>"https://telegram.me/bot_sazan_good"] 
+                    
                 ] ,
 		[
 	['text'=>"عضو شدم🛰",'callback_data'=>'join']
@@ -428,7 +426,7 @@ if($check1 != "member" && $check1 != "creator" && $check1 != "administrator" or 
         ]);
 			}else{
             sendAction($chat_id, 'typing');
-$admin = getChatstats(@$text,"توکن");
+$admin = getChatstats(@$text,"541645114:AAEeGiponeUAv45w4uBVQzRogAa0s1yzFVw");
 if($admin != true){
           bot('sendmessage', [
             'chat_id' => $chat_id,
